@@ -1,108 +1,109 @@
 import random
 
+#select all out-commented code and press ctrl + / to reverse the out-commenting
 # possible numbers/letters on cards
-numbers = ["A", '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+# numbers = ["A", '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
 
-# card templates:
+# # card templates:
 
-spades = """
-{} of spades
- ________________________
-|                        |
-|   ♠                ♠   |
-|                        |
-|                        |
-|                        |
-|                        |
-|                        |
-|           {:>2}           |
-|                        |
-|                        |
-|                        |
-|                        |
-|                        |
-|   ♠                ♠   |
-|________________________|
-"""
+# spades = """
+# {} of spades
+#  ________________________
+# |                        |
+# |   ♠                ♠   |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |           {:>2}           |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |   ♠                ♠   |
+# |________________________|
+# """
 
-diamonds = """
-{} of diamonds
- ________________________
-|                        |
-|   ♦                ♦   |
-|                        |
-|                        |
-|                        |
-|                        |
-|                        |
-|           {:>2}           |
-|                        |
-|                        |
-|                        |
-|                        |
-|   ♦                ♦   |
-|                        |
-|________________________|
-"""
+# diamonds = """
+# {} of diamonds
+#  ________________________
+# |                        |
+# |   ♦                ♦   |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |           {:>2}           |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |   ♦                ♦   |
+# |                        |
+# |________________________|
+# """
 
-clubs = """
-{} of clubs
- ________________________
-|                        |
-|                        |
-|  ♣                 ♣   |
-|                        |
-|                        |
-|                        |
-|                        |
-|           {:>2}           |
-|                        |
-|                        |
-|                        |
-|                        |
-|  ♣                 ♣   |
-|                        |
-|________________________|
-"""
+# clubs = """
+# {} of clubs
+#  ________________________
+# |                        |
+# |                        |
+# |  ♣                 ♣   |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |           {:>2}           |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |  ♣                 ♣   |
+# |                        |
+# |________________________|
+# """
 
-hearts = """
-{} of hearts
- ________________________
-|                        |
-|  ❤                ❤    |
-|                        |
-|                        |
-|                        |
-|                        |
-|           {:>2}           |
-|                        |
-|                        |
-|                        |
-|                        |
-|                        |
-|  ❤                ❤    |
-|                        |
-|________________________|
-"""
+# hearts = """
+# {} of hearts
+#  ________________________
+# |                        |
+# |  ❤                ❤    |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |           {:>2}           |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |                        |
+# |  ❤                ❤    |
+# |                        |
+# |________________________|
+# """
 
-symbols = [spades, diamonds, clubs, hearts]
+# symbols = [spades, diamonds, clubs, hearts]
 
-# list of already used cards
-already_used = []
+# # list of already used cards
+# already_used = []
 
-# while loop lasts until already_used contains 52 items
-while len(already_used) < 52:
-    number = random.randint(0, len(numbers)-1)
-    symbol = random.randint(0, len(symbols)-1)
-    card = symbols[symbol].format(numbers[number], numbers[number])
-    if not already_used.__contains__((number, symbol)):
-        # I save the generated number and symbol (as a tuple) instead of the whole card
-        already_used.append((number, symbol))
-        print(card)
+# # while loop lasts until already_used contains 52 items
+# while len(already_used) < 52:
+#     number = random.randint(0, len(numbers)-1)
+#     symbol = random.randint(0, len(symbols)-1)
+#     card = symbols[symbol].format(numbers[number], numbers[number])
+#     if not already_used.__contains__((number, symbol)):
+#         # I save the generated number and symbol (as a tuple) instead of the whole card
+#         already_used.append((number, symbol))
+#         print(card)
 
 
-print("all cards are printed")
+# print("all cards are printed")
 
 # LESS CPU CONSUMING:
 

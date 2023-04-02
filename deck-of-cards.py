@@ -10,7 +10,7 @@ card = """
 |                        |
 |                        |
 |                        |
-|           {0:>2}           |
+|          {0:>2}            |
 |                        |
 |                        |
 |                        |
@@ -54,8 +54,19 @@ while len(used_cards) < 52:
 
         used_cards.append((num, sym))
 
+print("HOW TO PLAY:\n   - Press 'ENTER' to generate a card\n   - Type 'shuffle' to shuffle the remaining cards in the deck\n\n")
+
+print("############################\n\nPRESS ENTER TO GENERATE CARD\n\n############################")
+
+
 for i in range(52):
-    input()
-    random_card = random.randint(0, len(cards)-1)
-    print(cards[random_card])
-    cards.pop(random_card)
+    inp = input()
+    if inp.lower() == "shuffle":
+        random.shuffle(cards)
+        print("\n\n*the cards are being shuffled*\n\nDone!\n")
+    elif inp == "":
+        random_card = random.randint(0, len(cards)-1)
+        print(cards[random_card])
+        cards.pop(random_card)
+
+print("The deck is empty\n")

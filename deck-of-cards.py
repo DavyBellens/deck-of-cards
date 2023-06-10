@@ -68,5 +68,5 @@ for i in range(52):
         random_card = random.randint(0, len(cards)-1)
         print(cards[random_card])
         cards.pop(random_card)
-
+ 
 print("The deck is empty\n")
